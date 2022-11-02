@@ -3,8 +3,23 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    background-color: darkblue;
+    width: 100vw;
+    height: 100vh;
 }
 
+.login-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
 input {
     width: 300px;
     padding: 10px;
@@ -21,11 +36,11 @@ input {
     margin-top: 10px;
     border-radius: 5px;
     font-weight: bold;
-    background-color: darksalmon;
+    background-color: rgb(180, 149, 10);
     border: none
 }
 
 .signup:hover{
-    background-color: coral;
+    background-color: rgb(235, 241, 62);
 }
 

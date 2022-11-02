@@ -62,7 +62,8 @@ const Login = () => {
   }
   return (
     <div className="home">
-      <form onSubmit={submitHandler} className="home">
+      <h2 className="title">LOGIN TO REDUX APPLICATION</h2>
+      <form onSubmit={submitHandler} className="login-form">
         <input type="text" value={userName} placeholder="Username" onChange={userNameChange} />
         <input type="password" value={password} placeholder="Password" onChange={passwordChange} />
         <button className="signup">Sign up</button>

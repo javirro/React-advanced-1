@@ -35,7 +35,7 @@ const ShowData = () => {
     <>
       <button className="logout" onClick={logoutHandler}>LOGOUT</button>
       <div className='show'>
-        <h2> Showing data </h2>
+        <h2 className='title'> SHOWING DATA </h2>
         {allposts !== null && allposts !== undefined &&
           <div className='post-ids'>
             {allposts.map((post) => <button key={post?.id} className="post-bt" onClick={() => clickHandler(post)}> {post?.id}</button>)}
@@ -45,11 +45,9 @@ const ShowData = () => {
           <div className='show-img'>
             <img src={post.image} alt="post data"></img>
           </div>}
+            <span style={{"color":"white", "font-weight":"bold", "margin-top":"55px"}}> User token: {user}</span>
       </div>
 
-      <div className='show' style={{"margin-top": "40px"}}>
-        <span style={{"color":"red", "font-weight":"bold"}}> User token: {user}</span>
-      </div>
     </>
   )
 }
