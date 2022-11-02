@@ -31,3 +31,9 @@ To use  redux ToolKit, first of all we have to create the slice. We will create 
 * **initialState:** The value of state at the beginning
 * **reducers** : This is an object with all the actions that we want to define
 
+Once we have created the slice we have to export the actions of our  slice and the reducer. In this way, we could use it in any place of our application.
+
+Next step is creating the store. In a new file we will use the method _configureStore()_. This object has a parameter called _reducer_ and it receives each of the slice that we have created. All the created slices are grouped in this store object.
+
+#### How To use the store that we have created
+We are going to use the react-redux hooks (_useSelector_ and _useDispatch_). The first one is used to get the value of the state of the reducer that we want.
