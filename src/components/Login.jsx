@@ -66,7 +66,6 @@ const Login = () => {
         <input type="text" value={userName} placeholder="Username" onChange={userNameChange} />
         <input type="password" value={password} placeholder="Password" onChange={passwordChange} />
         <button className="signup">Sign up</button>
-        <span> User token: {user}</span>
       </form>
     </div>
   )
