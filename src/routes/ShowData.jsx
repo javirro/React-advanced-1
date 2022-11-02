@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { logout } from '../store/userSlice'
 import '../styles/show.css'
+import { useCountDown } from '../hooks/useCountDown'
 
 const ShowData = () => {
   const [allposts, setAllPosts] = useState(null)
@@ -10,6 +11,7 @@ const ShowData = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const user = useSelector(s => s.user)
+  const time = useCountDown(10,0)
 
   const logoutHandler = () => {
     if (user !== null) {
@@ -45,7 +47,8 @@ const ShowData = () => {
           <div className='show-img'>
             <img src={post.image} alt="post data"></img>
           </div>}
-            <span style={{"color":"white", "font-weight":"bold", "margin-top":"55px"}}> User token: {user}</span>
+        <span style={{ "color": "white", "font-weight": "bold", "margin-top": "55px" }}> User token: {user}</span>
+        <span>{time}</span>
       </div>
 
     </>
