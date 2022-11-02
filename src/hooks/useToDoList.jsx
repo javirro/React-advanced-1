@@ -1,5 +1,5 @@
 import { useState } from "react"
-export const useTodo = () => {
+export const useToDoList = () => {
     const [list, setNewList] = useState()
     return {
         get: () => list,
