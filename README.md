@@ -36,4 +36,12 @@ Once we have created the slice we have to export the actions of our  slice and t
 Next step is creating the store. In a new file we will use the method _configureStore()_. This object has a parameter called _reducer_ and it receives each of the slice that we have created. All the created slices are grouped in this store object.
 
 #### How To use the store that we have created
-We are going to use the react-redux hooks (_useSelector_ and _useDispatch_). The first one is used to get the value of the state of the reducer that we want.
+We are going to use the react-redux hooks (_useSelector_ and _useDispatch_). The first one is used to get the value of the state of the reducer that we want and the second is used to update the state value.
+
+* `const user = useSelector (s => s.user)`
+* `const dispatch = useDispatch()`
+
+Furthermore, we have  to import the reducer actions that we are going to use(dispatch).
+
+* `dispatch(login(userInfo))`
+* `dispatch(logout())`
