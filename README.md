@@ -52,8 +52,11 @@ To use React router in our file App.js  we have to import :
 With BrowserRouter we define the router that we will use.
 
 
- ```<BrowserRouter>
+ ```
+ <BrowserRouter>
     <Router>
      <Route path="/route" element = {<Element />}>
     </Router>
- </BrowserRouter>```
+ </BrowserRouter>
+
+ ```
