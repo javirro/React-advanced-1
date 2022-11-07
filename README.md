@@ -38,3 +38,22 @@ Furthermore, we have  to import the reducer actions that we are going to use(dis
 
 * `dispatch(login(userInfo))`
 * `dispatch(logout())`
+
+## React Router
+
+With React router we can use several routes inside our application.
+
+### `npm install react-router-dom`
+
+To use React router in our file App.js  we have to import :
+
+* `import { BrowserRouter, Route, Routes } from 'react-router-dom'`
+
+With BrowserRouter we define the router that we will use.
+
+
+* `<BrowserRouter>`
+    * `<Router>`
+        * `<Route path="/route" element = {<Element />}>`
+    * `</Router>`
+* `</BrowserRouter>`
