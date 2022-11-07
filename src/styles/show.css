@@ -10,9 +10,25 @@
     align-items: center;
     flex-direction: column;
     background-color: rgb(34, 1, 58);
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
     overflow: hidden;
+}
+
+.post-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    background-color: rgb(120, 1, 205);
+}
+
+.post-img-container  h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white
 }
 
 .post-ids{
