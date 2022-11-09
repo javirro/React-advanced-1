@@ -63,9 +63,9 @@ This is the way to define a couple of routes without params:
 
  ```
 To navigate from one router to another, we have two different ways to do it.
-* Using JSX elements like: <Link> <NavLink>
-* Using hooks: useNavigate
-* Using JSX Element: <Navigate>
+* Using JSX elements like: **<Link> <NavLink>**
+* Using hooks: **useNavigate**
+* Using JSX Element: **<Navigate>**
 
 The JSX elements work as <a> tag. But it permits going to another router WITHOUT refreshing the page, so, we can keep the state of common components in the page.
 
@@ -83,7 +83,7 @@ The difference between Link and NavLik is that NavLink has an active attribute a
    navigate("/route")
  ```
 
-The JSX element <Navigate to="/route"> permits move to specific router when the page is render. It is interesting to go to that route without waiting any action (fetching data, click, submit, etc)
+The JSX element **<Navigate to="/route">** permits move to specific router when the page is render. It is interesting to go to that route without waiting any action (fetching data, click, submit, etc)
 #### Using routes with Params
 
  ```
@@ -96,4 +96,7 @@ The JSX element <Navigate to="/route"> permits move to specific router when the 
 ```
 
 When we are inside a route, to obtain the params:
-```const { id } = useParams()```
+
+```
+const { id } = useParams()
+```
