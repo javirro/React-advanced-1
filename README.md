@@ -45,18 +45,55 @@ With React router we can use several routes inside our application.
 
 ### `npm install react-router-dom`
 
+#### Using routes without Params
+
 To use React router in our file App.js  we have to import :
 
 * `import { BrowserRouter, Route, Routes } from 'react-router-dom'`
 
-With BrowserRouter we define the router that we will use.
-
+This is the way to define a couple of routes without params:
 
  ```
  <BrowserRouter>
     <Router>
-     <Route path="/route" element = {<Element />}>
+     <Route path="/route" element = {<RouteComponent />}>
+      <Route path="/show" element = {<ShowComponent />}>
     </Router>
  </BrowserRouter>
 
  ```
+To navigate from one router to another, we have two different ways to do it.
+* Using JSX elements like: <Link> <NavLink>
+* Using hooks: useNavigate
+* Using JSX Element: <Navigate>
+
+The JSX elements work as <a> tag. But it permits going to another router WITHOUT refreshing the page, so, we can keep the state of common components in the page.
+
+The difference between Link and NavLik is that NavLink has an active attribute an it permits make the difference between the different Link and we can know what is selected in each moment.
+
+ ```
+    <Link to="/route"> Home </Link>
+    <NavLink to="/route"> Home </NavLink>
+ ```
+
+ The other way to move from one router to another is using the hook: useNavigate()
+
+ ```
+   const navigate = useNavigate()
+   navigate("/route")
+ ```
+
+The JSX element <Navigate to="/route"> permits move to specific router when the page is render. It is interesting to go to that route without waiting any action (fetching data, click, submit, etc)
+#### Using routes with Params
+
+ ```
+ <BrowserRouter>
+    <Router>
+     <Route path="/route/:id" element = {<RouteComponent />}>
+      <Route path="/show/:id" element = {<ShowComponent />}>
+    </Router>
+ </BrowserRouter>
+```
+
+When we are inside a route, to obtain the params:
+```const { id } = useParams()```
