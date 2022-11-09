@@ -63,9 +63,9 @@ This is the way to define a couple of routes without params:
 
  ```
 To navigate from one router to another, we have two different ways to do it.
-* Using JSX elements like: **<Link> <NavLink>**
+* Using JSX elements like: **```<Link> <NavLink>```**
 * Using hooks: **useNavigate**
-* Using JSX Element: **<Navigate>**
+* Using JSX Element: **```<Navigate>```**
 
 The JSX elements work as <a> tag. But it permits going to another router WITHOUT refreshing the page, so, we can keep the state of common components in the page.
 
@@ -83,7 +83,7 @@ The difference between Link and NavLik is that NavLink has an active attribute a
    navigate("/route")
  ```
 
-The JSX element **<Navigate to="/route">** permits move to specific router when the page is render. It is interesting to go to that route without waiting any action (fetching data, click, submit, etc)
+The JSX element **```<Navigate to="/route">```** permits move to specific router when the page is render. It is interesting to go to that route without waiting any action (fetching data, click, submit, etc)
 #### Using routes with Params
 
  ```
@@ -100,3 +100,19 @@ When we are inside a route, to obtain the params:
 ```
 const { id } = useParams()
 ```
+
+#### Nested routes
+
+In this case, we are a route with some parameters inside other one.
+ ```
+     <BrowserRouter>
+          <Routes>
+            <Route path="/show" element={<ShowData />} >
+              <Route path="" element={<div>Selecciona un pokemon...</div>} />
+              <Route path=":id" element={<PostData />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+```
+
+One element which is frequently used with nested routes is: ```<Outlet />```. This component is used in the parents route to specify the part of the page in which we want to show the content of the child route. When we use **Outlet** we are keeping a part of the parent page in all the children pages.
